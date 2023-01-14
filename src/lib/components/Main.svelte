@@ -3,7 +3,7 @@
 	import HiglightCode from './HiglightCode.svelte';
 </script>
 
-<div class="container:md md:grid md:grid-cols-2 h-96">
+<div class="container:md h-96 md:grid md:grid-cols-2">
 	<Form />
 	<HiglightCode />
 </div>

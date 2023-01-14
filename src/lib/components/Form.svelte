@@ -19,7 +19,7 @@
 <div class="flex h-auto w-full">
 	<form
 		on:submit|preventDefault={handleSubmit}
-		class="flex w-full flex-col md:items-center bg-slate-800 px-4 py-4"
+		class="flex w-full flex-col bg-slate-800 px-4 py-4 md:items-center"
 	>
 		<textarea
 			class="
@@ -49,6 +49,9 @@
 				code = target.value;
 			}}
 		/>
-		<button class="inline-block rounded bg-blue-600 px-6 py-2.5 text-xs font-medium uppercase leading-tight text-white shadow-md transition duration-150 ease-in-out hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg md:w-40">Submit Code</button>
+		<button
+			class="inline-block rounded bg-blue-600 px-6 py-2.5 text-xs font-medium uppercase leading-tight text-white shadow-md transition duration-150 ease-in-out hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg md:w-40"
+			>Submit Code</button
+		>
 	</form>
 </div>
