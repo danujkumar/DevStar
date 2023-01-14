@@ -5,5 +5,5 @@
 </script>
 
 <Navbar />
-<slot/>
+<slot />
 <Main />

@@ -3,7 +3,10 @@
 	import { fade } from 'svelte/transition';
 </script>
 
-<div class="flex h-48 w-full items-center overflow-auto bg-slate-800" transition:fade>
+<div
+	class="scrollbar-hide flex h-48 w-full items-center overflow-scroll bg-slate-800"
+	transition:fade
+>
 	<Card />
 	<Card />
 	<Card />

@@ -16,23 +16,39 @@
 	};
 </script>
 
-<div class="flex w-full">
+<div class="flex h-auto w-full">
 	<form
 		on:submit|preventDefault={handleSubmit}
-		class="flex w-full flex-col content-center px-4 py-4"
+		class="flex w-full flex-col md:items-center bg-slate-800 px-4 py-4"
 	>
 		<textarea
-			class="border-2 outline-none"
+			class="
+        m-0
+        mb-5
+        block
+        w-full
+        rounded
+        border
+        border-solid
+        border-gray-300 bg-white
+        bg-clip-padding px-3 py-1.5
+        text-base
+        font-normal
+        text-gray-700
+        transition
+		ease-in-out
+        focus:border-blue-600 focus:bg-white focus:text-gray-700 focus:outline-none
+      "
+			rows="10"
+			placeholder="Your code"
 			name="code"
-			placeholder="code"
 			spellcheck={false}
 			on:forminput={handleInput}
 			bind:value={code}
-			rows="10"
 			on:change={({ target }) => {
 				code = target.value;
 			}}
 		/>
-		<button class="my-1 border-2 px-2 py-1">Submit Code</button>
+		<button class="inline-block rounded bg-blue-600 px-6 py-2.5 text-xs font-medium uppercase leading-tight text-white shadow-md transition duration-150 ease-in-out hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg md:w-40">Submit Code</button>
 	</form>
 </div>

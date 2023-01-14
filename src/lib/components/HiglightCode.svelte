@@ -10,7 +10,6 @@
 
 	import { onDestroy } from 'svelte';
 	import { userCode, userTheme } from '../util/stores';
-	import captureShot from '../util/capture';
 	// const code = "const add = (a: number, b: number) => a + b;";
 	var code = '';
 	const unsubscribeToCode = userCode.subscribe((value) => {
@@ -55,8 +54,8 @@
 		{@html tango}
 	{/if}
 </svelte:head>
-<div class="flex items-center justify-center bg-slate-700 py-2">
-	<div id="wrapper" class="w-3/4">
+<div class="flex justify-center bg-slate-700 py-5 overflow-scroll">
+	<div id="devstar" class="w-3/4 h-fit rounded-md bg-red-400 px-5 py-10 shadow-lg">
 		{#if code.length != 0}
 			<Highlight language={typescript} {code} />
 		{/if}
@@ -69,10 +68,3 @@
   <button name="androidstudio" on:click={handleTheme}>Android Studio</button>
   <button name="tango" on:click={handleTheme}>Tango</button>
 </div> -->
-
-<!-- <button on:click={captureShot}>Capture</button> -->
-<style>
-	#wrapper {
-		@apply rounded-md bg-red-400 px-5 py-10 shadow-lg;
-	}
-</style>
