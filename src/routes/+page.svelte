@@ -1,2 +1,15 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script>
+	import Card from '../lib/components/Card.svelte';
+	import { fade } from 'svelte/transition';
+</script>
+
+<div class="flex h-48 w-full items-center overflow-auto bg-slate-800" transition:fade>
+	<Card />
+	<Card />
+	<Card />
+	<Card />
+	<Card />
+	<Card />
+	<Card />
+	<Card />
+</div>

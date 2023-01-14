@@ -12,9 +12,16 @@
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^1.0.0",
 		"@sveltejs/kit": "^1.0.0",
-		"prettier": "^2.8.0",
+		"autoprefixer": "^10.4.13",
+		"dom-to-image": "^2.6.0",
+		"postcss": "^8.4.21",
+		"prettier": "^2.8.2",
 		"prettier-plugin-svelte": "^2.8.1",
+		"prettier-plugin-tailwindcss": "^0.2.1",
 		"svelte": "^3.54.0",
+		"svelte-awesome": "^3.0.1",
+		"svelte-highlight": "^7.1.2",
+		"tailwindcss": "^3.2.4",
 		"vite": "^4.0.0"
 	},
 	"type": "module"
