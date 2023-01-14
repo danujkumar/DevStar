@@ -1,4 +1,5 @@
 <script>
+	import { fade } from 'svelte/transition';
 	const languages1 = [
 		{
 			id: 11,
@@ -38,7 +39,7 @@
 	];
 </script>
 
-<div class="grid h-full grid-cols-2 items-center justify-center md:grid-cols-1">
+<div class="grid h-48 grid-cols-2 items-center justify-center md:grid-cols-1" in:fade>
 	<ul class="flex flex-col items-center justify-evenly md:flex-row">
 		{#each languages1 as item}
 			<li>

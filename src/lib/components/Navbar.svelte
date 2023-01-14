@@ -33,6 +33,6 @@
 
 <ul class="flex flex-row justify-center border-b-0 pl-0 md:justify-start bg-white">
 	<Link name="Theme" lkn="./" />
-	<Link name="Language" lkn="./" />
-	<Link name="Editor" lkn="./" />
+	<Link name="Language" lkn="./language" />
+	<Link name="Editor" lkn="./editor" />
 </ul>
