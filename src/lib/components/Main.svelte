@@ -4,14 +4,18 @@
 	import Editor from './Editor.svelte';
 	import Form from './Form.svelte';
 	import HiglightCode from './HiglightCode.svelte';
+	import { fly } from 'svelte/transition';
 
 	import { navTab } from '../util/stores';
+	import { onDestroy } from 'svelte';
 
 	var currentTab = 1;
 	const unsubscribeToNavTab = navTab.subscribe((value) => {
 		currentTab = value;
 		console.log(currentTab);
 	});
+
+	onDestroy(unsubscribeToNavTab);
 </script>
 
 {#if currentTab == 1}
@@ -21,7 +25,7 @@
 {:else if currentTab == 3}
 	<Editor />
 {/if}
-<div class="container:md h-96 bg-slate-800 py-4 md:grid md:grid-cols-2">
+<div class="container:md h-96 bg-slate-800 py-4 md:grid md:grid-cols-2" transition:fly={{ y: 200 }}>
 	<Form />
 	<HiglightCode />
 </div>

@@ -1,6 +1,6 @@
 import { writable } from 'svelte/store';
 
-export var navTab = writable(0);
+export var navTab = writable(1);
 export var userCode = writable('');
 export var userTheme = writable('');
 export var userLang = writable('');
