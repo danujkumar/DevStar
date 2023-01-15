@@ -13,7 +13,7 @@
 </script>
 
 <nav
-	class="fixed h-14 w-full bg-gray-100 py-3 text-gray-500 shadow-lg hover:text-gray-700 focus:text-gray-700"
+	class="fixed h-16 w-full bg-gray-100 py-3 text-gray-500 z-10 hover:text-gray-700 focus:text-gray-700"
 >
 	<div class="container-fluid flex w-full flex-wrap items-center justify-between px-6">
 		<span class="cursor-pointer text-xl text-black">DevStar</span>
@@ -34,7 +34,7 @@
 		>
 	</div>
 </nav>
-<div class="h-14" />
+<div class="h-16" />
 
 <ul class="flex flex-row justify-center border-b-0 bg-white pl-0 md:justify-start">
 	<Link name="Theme" lkn="./" />

@@ -19,7 +19,7 @@
 <div class="flex h-auto w-full">
 	<form
 		on:submit|preventDefault={handleSubmit}
-		class="flex w-full flex-col bg-slate-800 px-4 py-4 md:items-center"
+		class="flex w-full flex-col bg-slate-800 px-4 pb-4 md:items-center"
 	>
 		<textarea
 			class="
@@ -39,7 +39,7 @@
 		ease-in-out
         focus:border-blue-600 focus:bg-white focus:text-gray-700 focus:outline-none
       "
-			rows="10"
+			rows="12"
 			placeholder="Your code"
 			name="code"
 			spellcheck={false}

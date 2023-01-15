@@ -1,6 +1,6 @@
 <script>
 	import Highlight from 'svelte-highlight';
-	import c from 'svelte-highlight/languages/c';
+	import { json, markdown, go, python, cpp, csharp, javascript,java } from 'svelte-highlight/languages';
 	import typescript from 'svelte-highlight/languages/typescript';
 
 	import androidstudio from 'svelte-highlight/styles/androidstudio';
@@ -53,8 +53,8 @@
 		{@html tango}
 	{/if}
 </svelte:head>
-<div class="flex justify-center overflow-scroll bg-slate-700 py-5">
-	<div id="devstar" class="h-fit w-3/4 rounded-md bg-red-400 px-10 py-10 shadow-lg">
+<div class="flex justify-center overflow-scroll bg-slate-700 py-5 px-4">
+	<div id="devstar" class="h-fit w-fit overflow-scroll rounded-md bg-red-400 shadow-lg">
 		{#if code.length != 0}
 			<Highlight language={typescript} {code} />
 		{/if}

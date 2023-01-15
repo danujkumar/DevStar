@@ -26,7 +26,7 @@
 	};
 </script>
 
-<div class="h-48" in:fade>
+<div class="h-52" in:fade>
 	<h1>Window</h1>
 
 	<div class="flex items-center justify-start">
