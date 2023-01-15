@@ -1,7 +1,15 @@
 <script>
 	import Highlight from 'svelte-highlight';
-	import { json, markdown, go, python, cpp, csharp, javascript,java } from 'svelte-highlight/languages';
-	import typescript from 'svelte-highlight/languages/typescript';
+	import {
+		json,
+		markdown,
+		go,
+		python,
+		cpp,
+		csharp,
+		javascript,
+		java
+	} from 'svelte-highlight/languages';
 
 	import androidstudio from 'svelte-highlight/styles/androidstudio';
 	import default_light from 'svelte-highlight/styles/default-light';
@@ -9,10 +17,12 @@
 	import tango from 'svelte-highlight/styles/tango';
 
 	import { onDestroy } from 'svelte';
-	import { userCode, userTheme } from '../util/stores';
+	import { userCode, userTheme, userLang } from '../util/stores';
+
 	var code = '';
 	const unsubscribeToCode = userCode.subscribe((value) => {
 		code = value;
+		console.log('updated code');
 	});
 
 	var allthemes = {
@@ -31,8 +41,17 @@
 		}
 	});
 
+	let lang = javascript;
+	const allLang = [json, markdown, go, python, cpp, csharp, java, javascript];
+	const unsubscribeToLanguage = userLang.subscribe((value) => {
+		console.log('updated theme');
+		lang = allLang[value - 11];
+		console.log(lang);
+	});
+
 	onDestroy(unsubscribeToCode);
 	onDestroy(unsubscribeToTheme);
+	onDestroy(unsubscribeToLanguage);
 
 	const handleTheme = ({ target }) => {
 		const theme = target.name;
@@ -56,7 +75,7 @@
 <div class="flex justify-center overflow-scroll bg-slate-700 py-5 px-4">
 	<div id="devstar" class="h-fit w-fit overflow-scroll rounded-md bg-red-400 shadow-lg">
 		{#if code.length != 0}
-			<Highlight language={typescript} {code} />
+			<Highlight language={lang} {code} />
 		{/if}
 	</div>
 </div>

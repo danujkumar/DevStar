@@ -13,7 +13,7 @@
 </script>
 
 <nav
-	class="fixed h-16 w-full bg-gray-100 py-3 text-gray-500 z-10 hover:text-gray-700 focus:text-gray-700"
+	class="fixed z-10 h-16 w-full bg-gray-100 py-3 text-gray-500 hover:text-gray-700 focus:text-gray-700"
 >
 	<div class="container-fluid flex w-full flex-wrap items-center justify-between px-6">
 		<span class="cursor-pointer text-xl text-black">DevStar</span>

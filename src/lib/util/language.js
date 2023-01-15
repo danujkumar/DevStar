@@ -1,4 +1,4 @@
-const languages1 = [
+const languages = [
 	{
 		id: 11,
 		name: 'JSON'
@@ -14,10 +14,7 @@ const languages1 = [
 	{
 		id: 14,
 		name: 'Python'
-	}
-];
-
-const languages2 = [
+	},
 	{
 		id: 15,
 		name: 'C++'
@@ -36,4 +33,4 @@ const languages2 = [
 	}
 ];
 
-export { languages1, languages2 };
+export default languages;

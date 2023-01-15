@@ -1,3 +1,5 @@
+// Code to capture image of the div
+
 import domtoimage from 'dom-to-image';
 
 function captureShot() {
