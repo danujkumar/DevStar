@@ -1,18 +1,5 @@
 <script>
-	import Card from '../lib/components/Card.svelte';
-	import { fade } from 'svelte/transition';
+	import Main from '../lib/components/Main.svelte';
 </script>
 
-<div
-	class="scrollbar-hide relative flex  h-52 w-full items-center overflow-scroll bg-slate-800"
-	in:fade
->
-	<Card />
-	<Card />
-	<Card />
-	<Card />
-	<Card />
-	<Card />
-	<Card />
-	<Card />
-</div>
+<Main />

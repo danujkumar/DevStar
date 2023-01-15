@@ -4,12 +4,14 @@
 	import moonO from 'svelte-awesome/icons/moonO';
 
 	import Link from './Link.svelte';
-
+	import { navTabElements } from '../util/stores';
 	import captureShot from '../util/capture';
 	var theme = sunO;
 	const handleTheme = () => {
 		theme = theme == sunO ? moonO : sunO;
 	};
+
+	const handleNavTab = () => {};
 </script>
 
 <nav
@@ -37,7 +39,7 @@
 <div class="h-16" />
 
 <ul class="flex flex-row justify-center border-b-0 bg-white pl-0 md:justify-start">
-	<Link name="Theme" lkn="./" />
-	<Link name="Language" lkn="./language" />
-	<Link name="Editor" lkn="./editor" />
+	{#each navTabElements as item}
+		<Link id={item.id} name={item.name} lkn={item.lnk} />
+	{/each}
 </ul>

@@ -1,10 +1,16 @@
 <script>
-	export let name, lkn;
+	import { navTab } from '../util/stores';
+	export let name, lkn, id;
+
+	const handleNavTab = () => {
+		navTab.update(() => id);
+	};
 </script>
 
 <ul>
 	<a
 		href={lkn}
+		on:click={handleNavTab}
 		class="
       nav-link
       my-2
