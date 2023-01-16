@@ -8,7 +8,8 @@
 		cpp,
 		csharp,
 		javascript,
-		java
+		java,
+		plaintext
 	} from 'svelte-highlight/languages';
 
 	import androidstudio from 'svelte-highlight/styles/androidstudio';
@@ -41,7 +42,7 @@
 		}
 	});
 
-	let lang = javascript;
+	let lang;
 	const allLang = [json, markdown, go, python, cpp, csharp, java, javascript];
 	const unsubscribeToLanguage = userLang.subscribe((value) => {
 		console.log('updated theme');
@@ -75,7 +76,7 @@
 <div class="flex justify-center overflow-scroll bg-slate-700 py-5 px-4">
 	<div id="devstar" class="h-fit w-fit overflow-scroll rounded-md bg-red-400 shadow-lg">
 		{#if code.length != 0}
-			<Highlight language={lang} {code} />
+			<Highlight language={plaintext || lang} {code} />
 		{/if}
 	</div>
 </div>
