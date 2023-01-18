@@ -2,6 +2,7 @@
 	import Card from './Card.svelte';
 	import { fade } from 'svelte/transition';
 	import themeList from '../util/themes'
+
 </script>
 
 <div

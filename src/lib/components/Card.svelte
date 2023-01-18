@@ -1,13 +1,21 @@
 <script>
-	export var name;
+	export var name, id;
+
+	import {userTheme} from '../util/stores';
+	const handleTheme = ({target})=>{
+		// console.log(target.id)
+		userTheme.update(()=> (target.id - 21));
+	}
 </script>
 <div class=" mx-4 block min-h-[160px] min-w-[240px] cursor-pointer rounded-lg bg-white shadow-lg">
 	<div class="relative">
 		<img class="h-auto max-w-full" src="../../devstar.jpeg" alt="" />
 		<button
-			class="absolute top-0 flex h-full w-full items-center justify-center rounded-sm bg-slate-50 opacity-0 transition-all ease-in hover:opacity-80"
+		{id}
+			class="absolute top-0 flex h-full w-full items-center justify-center rounded-sm bg-slate-50 opacity-0 transition-all ease-in hover:opacity-80 text-xl font-bold"
+			on:click={handleTheme}
 		>
-			<h1 class="text-xl font-bold">{name}</h1>
+			{name}
 		</button>
 	</div>
 </div>

@@ -19,6 +19,7 @@
 
 	import { onDestroy } from 'svelte';
 	import { userCode, userTheme, userLang } from '../util/stores';
+	import themeList from '../util/themes';
 
 	var code = '';
 	const unsubscribeToCode = userCode.subscribe((value) => {
@@ -34,12 +35,11 @@
 	};
 
 	allthemes.default_light = true;
+	let theme;
 	const unsubscribeToTheme = userTheme.subscribe((value) => {
-		const theme = value;
-		for (const key in allthemes) {
-			if (key == theme) allthemes[key] = true;
-			else allthemes[key] = false;
-		}
+		console.log(value);
+		theme = themeList[value].selectTheme;
+		console.log(theme);
 	});
 
 	let lang;
@@ -72,11 +72,12 @@
 	{:else if allthemes.tango}
 		{@html tango}
 	{/if}
+	{@html theme}
 </svelte:head>
 <div class="flex justify-center overflow-scroll bg-slate-700 py-5 px-4">
 	<div id="devstar" class="h-fit w-fit overflow-scroll rounded-md bg-red-400 shadow-lg">
 		{#if code.length != 0}
-			<Highlight language={plaintext || lang} {code} />
+			<Highlight language={lang || plaintext} {code} />
 		{/if}
 	</div>
 </div>
