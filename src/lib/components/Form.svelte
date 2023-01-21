@@ -2,12 +2,9 @@
 	import { userCode, userLang, userTheme } from '../util/stores';
 	import { get } from 'svelte/store';
 
-	var code = '';
-	const handleInput = ({ target }) => {
-		userCode = target.value;
-	};
+	var code;
 	const handleSubmit = () => {
-		if (code.length != 0) {
+		if (code) {
 			userCode.update(() => code);
 			// userLang.update(() => lang);
 			// userTheme.update(() => theme);
@@ -43,7 +40,6 @@
 			placeholder="Your code"
 			name="code"
 			spellcheck={false}
-			on:forminput={handleInput}
 			bind:value={code}
 			on:change={({ target }) => {
 				code = target.value;
