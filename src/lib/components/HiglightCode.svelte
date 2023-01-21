@@ -12,11 +12,6 @@
 		plaintext
 	} from 'svelte-highlight/languages';
 
-	import androidstudio from 'svelte-highlight/styles/androidstudio';
-	import default_light from 'svelte-highlight/styles/default-light';
-	import github from 'svelte-highlight/styles/github';
-	import tango from 'svelte-highlight/styles/tango';
-
 	import { onDestroy } from 'svelte';
 	import { userCode, userTheme, userLang } from '../util/stores';
 	import themeList from '../util/themes';
@@ -38,7 +33,7 @@
 	let theme;
 	const unsubscribeToTheme = userTheme.subscribe((value) => {
 		console.log(value);
-		theme = themeList[value].selectTheme;
+		theme = themeList[value];
 		console.log(theme);
 	});
 
@@ -53,26 +48,12 @@
 	onDestroy(unsubscribeToCode);
 	onDestroy(unsubscribeToTheme);
 	onDestroy(unsubscribeToLanguage);
-
-	const handleTheme = ({ target }) => {
-		const theme = target.name;
-		for (const key in allthemes) {
-			if (key == theme) allthemes[key] = true;
-			else allthemes[key] = false;
-		}
-	};
 </script>
 
 <svelte:head>
-	{@html default_light}
-	{#if allthemes.androidstudio}
-		{@html androidstudio}
-	{:else if allthemes.github}
-		{@html github}
-	{:else if allthemes.tango}
-		{@html tango}
+	{#if theme}
+		{@html theme.selectTheme}
 	{/if}
-	{@html theme}
 </svelte:head>
 <div class="flex justify-center overflow-scroll bg-slate-700 py-5 px-4">
 	<div id="devstar" class="h-fit w-fit overflow-scroll rounded-md bg-red-400 shadow-lg">
