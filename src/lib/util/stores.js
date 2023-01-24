@@ -16,11 +16,11 @@ const navTabElements = [
 		name: 'Language',
 		lnk: './'
 	},
-	{
-		id: 3,
-		name: 'Editor',
-		lnk: './'
-	},
+	// {
+	// 	id: 3,
+	// 	name: 'Editor',
+	// 	lnk: './'
+	// },
 	{
 		id: 4,
 		name: 'Gallery',

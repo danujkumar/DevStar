@@ -1,6 +1,6 @@
 <script>
-	export var name, id;
-	let imgPath = `../../imgs/${id - 20}.jpeg`;
+	export let name, id;
+	let imgPath = `../../themeimgs/${id - 20}.jpeg`;
 
 	import { userTheme } from '../util/stores';
 	const handleTheme = ({ target }) => {
