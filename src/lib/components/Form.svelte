@@ -6,9 +6,6 @@
 	const handleSubmit = () => {
 		if (code) {
 			userCode.update(() => code);
-			// userLang.update(() => lang);
-			// userTheme.update(() => theme);
-			console.log(get(userCode));
 		}
 	};
 </script>

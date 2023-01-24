@@ -26,14 +26,15 @@
 			>
 				Save</button
 			>
-			<button on:click={handleTheme}>
+			<!-- <button on:click={handleTheme}>
 				<Icon
 					class="duration-400 ml-5 w-8 cursor-pointer transition-all ease-in hover:rotate-12 hover:scale-110"
 					scale="1.4"
 					data={theme}
 				/>
 			</button></span
-		>
+		> -->
+		</span>
 	</div>
 </nav>
 <div class="h-16" />

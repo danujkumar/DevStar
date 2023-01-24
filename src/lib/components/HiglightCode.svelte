@@ -49,7 +49,7 @@
 		{@html themeList[1].selectTheme}
 	{/if}
 </svelte:head>
-<div class="flex justify-center overflow-scroll bg-slate-700 py-5 px-4">
+<div class="flex justify-center overflow-scroll bg-gray-50 py-5 px-4">
 	{#if code.length != 0}
 		<div id="devstar" class="h-fit w-fit overflow-scroll rounded-md bg-red-400 px-8 py-8 shadow-lg">
 			<Highlight language={lang || plaintext} {code} />
