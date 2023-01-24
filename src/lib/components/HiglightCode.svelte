@@ -22,14 +22,6 @@
 		console.log('updated code');
 	});
 
-	var allthemes = {
-		androidstudio: false,
-		default_light: false,
-		github: false,
-		tango: false
-	};
-
-	allthemes.default_light = true;
 	let theme;
 	const unsubscribeToTheme = userTheme.subscribe((value) => {
 		console.log(value);
@@ -53,12 +45,14 @@
 <svelte:head>
 	{#if theme}
 		{@html theme.selectTheme}
+	{:else}
+		{@html themeList[1].selectTheme}
 	{/if}
 </svelte:head>
 <div class="flex justify-center overflow-scroll bg-slate-700 py-5 px-4">
-	<div id="devstar" class="h-fit w-fit overflow-scroll rounded-md bg-red-400 shadow-lg">
-		{#if code.length != 0}
+	{#if code.length != 0}
+		<div id="devstar" class="h-fit w-fit overflow-scroll rounded-md bg-red-400 px-8 py-8 shadow-lg">
 			<Highlight language={lang || plaintext} {code} />
-		{/if}
-	</div>
+		</div>
+	{/if}
 </div>
