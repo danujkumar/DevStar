@@ -18,7 +18,7 @@
 						/>
 					</div>
 
-					<!-- Password input -->
+					<!-- Password Input -->
 					<div class="mb-6">
 						<input
 							type="password"
